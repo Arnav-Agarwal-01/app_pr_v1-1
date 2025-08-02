@@ -1,0 +1,175 @@
+{
+  "name": "college-event-management",
+  "version": "1.0.0",
+  "description": "College Event Management App - Full Stack Application for KMIT",
+  "main": "index.js",
+  
+  "//": "=================================================================",
+  "// SCRIPTS SECTION": "Development and deployment commands",
+  "//": "=================================================================",
+  
+  "scripts": {
+    "// DEVELOPMENT SCRIPTS": "Commands for local development",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend:dev": "cd frontend && npm start",
+    
+    "// INSTALLATION SCRIPTS": "Commands to install dependencies",
+    "backend:install": "cd backend && npm install",
+    "frontend:install": "cd frontend && npm install", 
+    "install:all": "npm run backend:install && npm run frontend:install",
+    
+    "// PRODUCTION SCRIPTS": "Commands for production deployment",
+    "backend:start": "cd backend && npm start",
+    "frontend:start": "cd frontend && npm start",
+    "start": "npm run backend:start",
+    
+    "// TESTING SCRIPTS": "Commands to run tests",
+    "test": "npm run backend:test && npm run frontend:test",
+    "backend:test": "cd backend && npm test",
+    "frontend:test": "cd frontend && npm test",
+    
+    "// UTILITY SCRIPTS": "Helper commands for development",
+    "setup": "npm install && npm run install:all",
+    "clean": "rm -rf node_modules backend/node_modules frontend/node_modules",
+    "clean:install": "npm run clean && npm run setup",
+    "verify": "node test-setup.js",
+    
+    "// BUILD SCRIPTS": "Commands for building the application",
+    "build": "npm run frontend:build",
+    "frontend:build": "cd frontend && npm run build",
+    
+    "// LINTING SCRIPTS": "Code quality and formatting",
+    "lint": "npm run backend:lint && npm run frontend:lint",
+    "backend:lint": "cd backend && npm run lint",
+    "frontend:lint": "cd frontend && npm run lint",
+    "format": "npm run backend:format && npm run frontend:format",
+    "backend:format": "cd backend && npm run format",
+    "frontend:format": "cd frontend && npm run format"
+  },
+  
+  "//": "=================================================================",
+  "// PROJECT METADATA": "Information about the project",
+  "//": "=================================================================",
+  
+  "keywords": [
+    "react-native",
+    "express",
+    "mongodb",
+    "college",
+    "event-management",
+    "kmit",
+    "mobile-app",
+    "nodejs",
+    "expo",
+    "full-stack"
+  ],
+  
+  "author": {
+    "name": "KMIT Development Team",
+    "email": "dev@kmit.edu",
+    "url": "https://kmit.edu"
+  },
+  
+  "contributors": [
+    {
+      "name": "Development Team",
+      "email": "dev@kmit.edu",
+      "role": "developer"
+    }
+  ],
+  
+  "license": "MIT",
+  
+  "//": "=================================================================",
+  "// REPOSITORY INFORMATION": "Version control and project links",
+  "//": "=================================================================",
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmit/college-event-management.git"
+  },
+  
+  "bugs": {
+    "url": "https://github.com/kmit/college-event-management/issues",
+    "email": "dev@kmit.edu"
+  },
+  
+  "homepage": "https://github.com/kmit/college-event-management#readme",
+  
+  "//": "=================================================================",
+  "// ENGINE REQUIREMENTS": "Node.js and npm version requirements",
+  "//": "=================================================================",
+  
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  
+  "//": "=================================================================",
+  "// DEVELOPMENT DEPENDENCIES": "Tools needed for development",
+  "//": "=================================================================",
+  
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  
+  "//": "=================================================================",
+  "// PROJECT CONFIGURATION": "Additional project settings",
+  "//": "=================================================================",
+  
+  "private": false,
+  
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  
+  "//": "=================================================================",
+  "// SCRIPT DESCRIPTIONS": "Detailed explanation of available commands",
+  "//": "=================================================================",
+  
+  "// SCRIPT USAGE": {
+    "dev": "Start both backend and frontend in development mode with hot reload",
+    "backend:dev": "Start only the backend server in development mode with nodemon",
+    "frontend:dev": "Start only the React Native frontend with Expo development server",
+    "install:all": "Install dependencies for both backend and frontend projects",
+    "setup": "Complete project setup - install root and all sub-project dependencies",
+    "clean": "Remove all node_modules directories for fresh installation",
+    "clean:install": "Clean all dependencies and reinstall everything",
+    "verify": "Run setup verification script to check project configuration",
+    "test": "Run all tests for both backend and frontend",
+    "build": "Build the frontend application for production deployment",
+    "lint": "Run code linting for both backend and frontend",
+    "format": "Format code using prettier for both backend and frontend"
+  },
+  
+  "//": "=================================================================",
+  "// DEVELOPMENT NOTES": "Important information for developers",
+  "//": "=================================================================",
+  
+  "// GETTING STARTED": [
+    "1. Clone the repository",
+    "2. Run 'npm run setup' to install all dependencies",
+    "3. Configure backend/.env with your database credentials",
+    "4. Run 'npm run verify' to check setup",
+    "5. Run 'npm run dev' to start development servers",
+    "6. Frontend: http://localhost:19006",
+    "7. Backend: http://localhost:4001"
+  ],
+  
+  "// PROJECT STRUCTURE": {
+    "backend/": "Express.js API server with MongoDB",
+    "frontend/": "React Native mobile app with Expo",
+    ".kiro/": "Kiro IDE specifications and configuration",
+    "test-setup.js": "Setup verification script",
+    "README.md": "Project documentation"
+  },
+  
+  "// TECHNOLOGY STACK": {
+    "Frontend": "React Native, Expo, React Navigation, Axios",
+    "Backend": "Node.js, Express.js, MongoDB, Mongoose, JWT",
+    "Development": "Concurrently, Nodemon, Expo CLI",
+    "Security": "Helmet, CORS, Rate Limiting, bcrypt"
+  }
+}
